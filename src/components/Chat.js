@@ -9,7 +9,7 @@ import icon from '../images/emoji.svg'
 import Messages from "./Messages";
 
 
-const socket = io.connect('http://localhost:5000')
+const socket = io.connect('https://messenger-cup-app.onrender.com')
 const Chat = () => {
     const [state, setState] = useState([]);
     const navigate = useNavigate();
