@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import io  from "socket.io-client";
 import styles from '../styles/Chat.module.scss'
 import EmojiPicker from "emoji-picker-react";
