@@ -8,7 +8,6 @@ import EmojiPicker from "emoji-picker-react";
 import icon from '../images/emoji.svg'
 import Messages from "./Messages";
 
-
 const socket = io.connect('https://messenger-cup-app.onrender.com')
 const Chat = () => {
     const [state, setState] = useState([]);
@@ -55,7 +54,6 @@ const Chat = () => {
         setMessage('');
     };
 
-
     return (
         <div className={styles.wrap}>
             <div className={styles.header}>
@@ -63,7 +61,7 @@ const Chat = () => {
                     {params.room}
                 </div>
                 <div className={styles.users}>
-                    {users} users in whis room
+                    {users} users online
                 </div>
                 <button className={styles.left} onClick={leaveRoom}>
                     leaveRoom
@@ -72,7 +70,7 @@ const Chat = () => {
             <div className={styles.messages}>
                 <Messages  messages={state} name={params.name}/>
             </div>
-            
+           
             <form className={styles.form} onSubmit={handleSubmit}>
                 <div className={styles.input}>
                     <input 
@@ -97,7 +95,6 @@ const Chat = () => {
                     <input type="submit" onSubmit={handleSubmit} value="Send a massage" />
                 </div>
             </form>
-
         </div>
     )
 };
